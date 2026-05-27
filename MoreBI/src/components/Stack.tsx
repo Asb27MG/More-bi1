@@ -5,7 +5,7 @@ import {
   AwsIcon, DockerIcon, GithubActionsIcon, CloudflareIcon, SonarQubeIcon, CiCdIcon,
   SqlIcon, DashboardIcon, PipelineIcon,
   PostgresIcon, OracleIcon, DynamoDbIcon, RedisIcon,
-  RestApiIcon, HikvisionIcon, DahuaIcon, HikCentralIcon, EslIcon,
+  RestApiIcon, IpCameraIcon, OnvifIcon, VmsIcon, EslIcon,
   ZeroTrustIcon, SastIcon,
 } from './TechIcon'
 
@@ -71,9 +71,9 @@ const GROUPS: ReadonlyArray<Group> = [
     code: '07', label: 'Integraciones', tone: 'amber',
     items: [
       { name: 'APIs REST', icon: <RestApiIcon /> },
-      { name: 'Hikvision', icon: <HikvisionIcon /> },
-      { name: 'Dahua', icon: <DahuaIcon /> },
-      { name: 'HikCentral', icon: <HikCentralIcon /> },
+      { name: 'Cámaras IP', icon: <IpCameraIcon /> },
+      { name: 'ONVIF', icon: <OnvifIcon /> },
+      { name: 'VMS / NVR', icon: <VmsIcon /> },
       { name: 'ESL / Etiquetas', icon: <EslIcon /> },
     ],
   },

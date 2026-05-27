@@ -13,8 +13,8 @@ const SOLUTIONS: ReadonlyArray<Solution> = [
     code: 'SOL/01',
     title: 'Plataforma de analítica operativa',
     description:
-      'Dashboards para visualizar entradas, salidas, ocupación, conversión y métricas clave integrando cámaras Hikvision, Dahua y fuentes de datos operativos.',
-    chips: ['Dashboards', 'KPIs', 'Tiempo real', 'Hikvision', 'Dahua'],
+      'Dashboards para visualizar entradas, salidas, ocupación, conversión y métricas clave integrando cámaras IP y fuentes de datos operativos.',
+    chips: ['Dashboards', 'KPIs', 'Tiempo real', 'Cámaras IP', 'IoT'],
     accent: 'violet',
   },
   {
@@ -34,8 +34,8 @@ const SOLUTIONS: ReadonlyArray<Solution> = [
   {
     code: 'SOL/04',
     title: 'Sistemas de enrolamiento, acceso y ESL',
-    description: 'Registro, validación, biometría, control de acceso con Hikvision/Dahua y gestión de etiquetas electrónicas (ESL) en retail e industria.',
-    chips: ['Biometría', 'Dahua', 'Hikvision', 'ESL', 'HikCentral'],
+    description: 'Registro, validación, biometría, control de acceso con cámaras IP y gestión de etiquetas electrónicas (ESL) en retail e industria.',
+    chips: ['Biometría', 'Cámaras IP', 'VMS', 'ESL', 'Control de acceso'],
     accent: 'amber',
   },
 ]

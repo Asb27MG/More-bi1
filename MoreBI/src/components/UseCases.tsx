@@ -7,7 +7,7 @@ type UseCase = Readonly<{
 const USE_CASES: ReadonlyArray<UseCase> = [
   { code: '01', title: 'Retail', description: 'Afluencia, ESL, conversión y dashboards para tiendas.' },
   { code: '02', title: 'Educación', description: 'Enrolamiento, validación y control de acceso institucional.' },
-  { code: '03', title: 'Seguridad', description: 'Hikvision, Dahua, HikCentral y acceso Zero Trust.' },
+  { code: '03', title: 'Seguridad', description: 'Cámaras IP, VMS y acceso Zero Trust.' },
   { code: '04', title: 'Telco', description: 'APIs, batch, microservicios y reportes SAST.' },
   { code: '05', title: 'Industria', description: 'Automatización, monitoreo IoT y trazabilidad.' },
   { code: '06', title: 'Finanzas', description: 'Reportes, conciliaciones e integración de datos.' },

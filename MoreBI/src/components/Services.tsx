@@ -80,7 +80,7 @@ const SERVICES: ReadonlyArray<Service> = [
   {
     code: 'S/08', accent: 'amber',
     title: 'Cámaras, IoT y ESL',
-    description: 'Afluencia y control de acceso con Hikvision y Dahua. Gestión de etiquetas electrónicas (ESL) para retail.',
+    description: 'Afluencia y control de acceso con cámaras IP. Gestión de etiquetas electrónicas (ESL) para retail.',
     icon: (
       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor"
         strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

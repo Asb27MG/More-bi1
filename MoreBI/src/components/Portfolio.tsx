@@ -11,16 +11,16 @@ type Project = Readonly<{
 const PROJECTS: ReadonlyArray<Project> = [
   {
     code: 'PRJ-01',
-    title: 'Dashboard de afluencia con Hikvision y Dahua',
-    description: 'Sistema para visualizar entradas, salidas, ocupación y métricas operativas integrando cámaras Hikvision, Dahua y HikCentral.',
-    tags: ['BI', 'Hikvision', 'Dahua', 'IoT'],
+    title: 'Dashboard de afluencia con cámaras IP',
+    description: 'Sistema para visualizar entradas, salidas, ocupación y métricas operativas integrando cámaras IP y VMS.',
+    tags: ['BI', 'Cámaras IP', 'VMS', 'IoT'],
     metric: { label: 'eventos/día', value: '1.2M' },
   },
   {
     code: 'PRJ-02',
     title: 'Plataforma de autoenrolamiento y ESL',
     description: 'Aplicación web para registro, validación biométrica, control de acceso y gestión de etiquetas electrónicas (ESL) en retail.',
-    tags: ['Web app', 'Biometría', 'ESL', 'Dahua'],
+    tags: ['Web app', 'Biometría', 'ESL', 'Cámaras IP'],
     metric: { label: 'usuarios', value: '50k+' },
   },
   {

@@ -248,7 +248,7 @@ export function RestApiIcon({ className = 'h-7 w-7' }: IconProps) {
   )
 }
 
-export function HikvisionIcon({ className = 'h-7 w-7' }: IconProps) {
+export function IpCameraIcon({ className = 'h-7 w-7' }: IconProps) {
   return (
     <svg viewBox="0 0 28 28" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M23 7l-7 5 7 5V7z" />
@@ -258,7 +258,7 @@ export function HikvisionIcon({ className = 'h-7 w-7' }: IconProps) {
   )
 }
 
-export function DahuaIcon({ className = 'h-7 w-7' }: IconProps) {
+export function OnvifIcon({ className = 'h-7 w-7' }: IconProps) {
   return (
     <svg viewBox="0 0 28 28" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M23 10l-7 4 7 4V10z" />
@@ -269,7 +269,7 @@ export function DahuaIcon({ className = 'h-7 w-7' }: IconProps) {
   )
 }
 
-export function HikCentralIcon({ className = 'h-7 w-7' }: IconProps) {
+export function VmsIcon({ className = 'h-7 w-7' }: IconProps) {
   return (
     <svg viewBox="0 0 28 28" className={className} fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="3" y="3" width="8" height="8" />

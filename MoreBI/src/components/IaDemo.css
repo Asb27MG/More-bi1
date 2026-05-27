@@ -1,0 +1,28 @@
+:root {
+  color-scheme: dark;
+}
+
+.ia-demo-header {
+  background: rgba(28, 24, 38, 0.98);
+}
+
+.ia-chat-window {
+  background: linear-gradient(180deg, rgba(22, 18, 33, 0.96), rgba(18, 14, 27, 0.92));
+}
+
+.ia-messages::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ia-messages::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ia-messages::-webkit-scrollbar-thumb {
+  background: rgba(73, 68, 84, 0.85);
+  border-radius: 999px;
+}
+
+.ia-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(65, 105, 225, 0.65);
+}

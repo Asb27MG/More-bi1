@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Obsidian Kinetic Evolved — Soft Neo-Brutalist tokens
+   ============================================================ */
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --bg: #15121b;
+    --surface-card: #1c1826;
+    --line: #2d2838;
+    --line-strong: #494454;
+    --primary: #4169e1;
+    --primary-300: #92b1ff;
+    --primary-200: #bed1ff;
+    --on-primary: #ffffff;
+    --tertiary: #ffb869;
+    --ink: #e7e0ed;
+    --ink-dim: #cbc3d7;
+    --ink-mute: #958ea0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    font-feature-settings: "ss01", "ss02", "cv11";
+  }
+
+  /* Ambient atmosphere — fixed gradient halos + engineering dot grid */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      radial-gradient(ellipse 65% 55% at 12% 12%, rgba(65, 105, 225, 0.18), transparent 65%),
+      radial-gradient(ellipse 55% 45% at 90% 80%, rgba(255, 184, 105, 0.10), transparent 60%),
+      radial-gradient(ellipse 75% 40% at 50% 115%, rgba(65, 105, 225, 0.12), transparent 55%);
+    background-size: 28px 28px, auto, auto, auto;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Geist", sans-serif;
+    color: var(--ink);
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--line-strong);
+    border: 1px solid var(--bg);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================================
+   Layout primitives — 4px grid, generous gutters
+   ============================================================ */
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-16;
+  }
+
+  .section {
+    @apply relative py-14 sm:py-16 lg:py-20;
+  }
+
+  /* ============================================================
+     Type tokens
+     ============================================================ */
+
+  .t-eyebrow {
+    font-family: "Geist Mono", "Geist", monospace;
+    @apply inline-flex items-center gap-2 border border-line bg-surface-card px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.18em] text-violet-200;
+    border-radius: 0.25rem;
+  }
+
+  .t-h1 {
+    @apply text-[32px] font-extrabold leading-[1.1] tracking-[-0.03em] text-ink sm:text-[44px] lg:text-[56px];
+  }
+
+  .t-h2 {
+    @apply text-[24px] font-bold leading-[1.2] tracking-[-0.02em] text-ink sm:text-[28px] lg:text-[32px];
+  }
+
+  .t-h3 {
+    @apply text-[18px] font-bold leading-[1.25] tracking-[-0.01em] text-ink sm:text-[20px];
+  }
+
+  .t-body {
+    @apply text-[15px] leading-[1.6] text-ink-dim sm:text-[16px];
+  }
+
+  .t-label {
+    @apply text-[14px] font-bold uppercase tracking-[0.08em];
+  }
+
+  .t-mono {
+    font-family: "Geist Mono", monospace;
+    @apply text-[12px] uppercase tracking-[0.18em];
+  }
+
+  /* ============================================================
+     Buttons — 2px border + 4px hard-offset shadow + press
+     ============================================================ */
+
+  .btn-primary {
+    @apply inline-flex select-none items-center justify-center gap-2 border-2 border-blue-600 bg-blue-600 px-5 py-3 text-label-bold uppercase tracking-[0.06em] text-white transition-all duration-150 ease-out;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 0 0 #000;
+  }
+  .btn-primary:hover {
+    background-color: #3358c6;
+    border-color: #3358c6;
+  }
+  .btn-primary:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 #000;
+  }
+
+  .btn-secondary {
+    @apply inline-flex select-none items-center justify-center gap-2 border-2 border-line-variant bg-surface-card px-5 py-3 text-label-bold uppercase tracking-[0.06em] text-ink transition-all duration-150 ease-out;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 0 0 #2d2838;
+  }
+  .btn-secondary:hover {
+    border-color: #4169e1;
+    color: #fff;
+    box-shadow: 4px 4px 0 0 #4169e1;
+  }
+  .btn-secondary:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 #4169e1;
+  }
+
+  .btn-ghost {
+    @apply inline-flex select-none items-center justify-center gap-2 border-2 border-transparent px-4 py-2.5 text-label-bold uppercase tracking-[0.06em] text-ink-dim transition-all duration-150 ease-out hover:border-line hover:bg-surface-card hover:text-ink;
+    border-radius: 0.25rem;
+  }
+
+  /* ============================================================
+     Cards — 1px border, neo shadow, generous padding
+     ============================================================ */
+
+  .card {
+    @apply relative border border-line bg-surface-card p-6 transition-all duration-200 ease-out sm:p-7;
+    border-radius: 0.5rem;
+  }
+
+  .card-neo {
+    @apply card;
+    box-shadow: 4px 4px 0 0 #2d2838;
+  }
+  .card-neo:hover {
+    border-color: #4169e1;
+    box-shadow: 6px 6px 0 0 #4169e1;
+    transform: translate(-2px, -2px);
+  }
+
+  .card-static {
+    @apply card;
+    box-shadow: 4px 4px 0 0 #2d2838;
+  }
+
+  /* Chip / tag — small, high-contrast, no shadow */
+  .chip {
+    @apply inline-flex items-center gap-1.5 border border-line bg-surface-low px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.1em] text-ink-dim;
+    border-radius: 0.25rem;
+    font-family: "Geist Mono", monospace;
+  }
+  .chip-violet {
+    @apply chip border-violet/40 text-violet-200;
+    background-color: rgba(65, 105, 225, 0.08);
+  }
+  .chip-amber {
+    @apply chip border-amber/40 text-amber-200;
+    background-color: rgba(255, 184, 105, 0.08);
+  }
+
+  /* Lists — horizontal rules, hover fills full width */
+  .list-row {
+    @apply flex items-start gap-4 border-t border-line px-4 py-5 transition-colors duration-150 hover:bg-surface-low sm:px-6;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full border border-line bg-surface-low px-4 py-3 text-body-md text-ink placeholder:text-ink-mute transition focus:border-violet focus:outline-none;
+    border-radius: 0.25rem;
+  }
+  .input:focus {
+    box-shadow: 2px 2px 0 0 #4169e1;
+  }
+}
+
+/* ============================================================
+   Utilities — reveal, grid, brutalist patterns
+   ============================================================ */
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Engineering grid (dotted + line) — structural, not organic */
+  .grid-dots {
+    background-image: radial-gradient(rgba(65, 105, 225, 0.25) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .grid-mask {
+    -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, black 30%, transparent 80%);
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, black 30%, transparent 80%);
+  }
+
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 0,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+
+  .underline-brutal {
+    background-image: linear-gradient(to right, #4169e1 0%, #4169e1 100%);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 4px;
+    padding-bottom: 4px;
+  }
+}

@@ -2,7 +2,7 @@ services:
   - type: web
     name: more-bi-backend
     env: node
-    rootDir: backend
+    rootDir: MoreBI/backend
     plan: free
     buildCommand: npm install && npm run build
     startCommand: npm run start
@@ -30,12 +30,12 @@ services:
 
   - type: static_site
     name: more-bi-frontend
-    rootDir: frontend
+    rootDir: MoreBI
     buildCommand: npm install && npm run build
     publishPath: dist
     autoDeploy: true
     envVars:
       - key: NODE_VERSION
         value: 20
-      - key: VITE_API_URL
+      - key: VITE_API_BASE_URL
         sync: false

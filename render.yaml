@@ -1,7 +1,7 @@
 services:
   - type: web
     name: more-bi-backend
-    env: node
+    runtime: node
     rootDir: MoreBI/backend
     plan: free
     buildCommand: npm install && npm run build
@@ -28,11 +28,12 @@ services:
       - key: CORS_ORIGIN
         sync: false
 
-  - type: static_site
+  - type: web
     name: more-bi-frontend
+    runtime: static
     rootDir: MoreBI
     buildCommand: npm install && npm run build
-    publishPath: dist
+    staticPublishPath: dist
     autoDeploy: true
     envVars:
       - key: NODE_VERSION
